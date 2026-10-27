@@ -1,0 +1,42 @@
+### 1. Hae kaikki urheilijat
+GET http://localhost:3001/api/athletes
+
+
+### 2. Lisää uusi urheilija
+POST http://localhost:3001/api/athletes
+Content-Type: application/json
+
+{
+  "first_name": "Aino",
+  "last_name": "Virtanen",
+  "nickname": "Aikku",
+  "birth_date": "2000-05-12",
+  "weight": 62.5,
+  "image_url": "https://example.com/urheilija.jpg",
+  "sport": "Yleisurheilu",
+  "achievements": "Suomen mestaruus 2025"
+}
+
+
+### 3. Hae yksi urheilija
+GET http://localhost:3001/api/athletes/1
+
+
+### 4. Päivitä urheilija
+PUT http://localhost:3001/api/athletes/1
+Content-Type: application/json
+
+{
+  "first_name": "Aino",
+  "last_name": "Virtanen",
+  "nickname": "Aikku",
+  "birth_date": "2000-05-12",
+  "weight": 63,
+  "image_url": "https://example.com/urheilija.jpg",
+  "sport": "Yleisurheilu",
+  "achievements": "Suomen mestaruus 2025, uusi ennätys"
+}
+
+
+### 5. Poista urheilija
+DELETE http://localhost:3001/api/athletes/1
